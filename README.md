@@ -36,9 +36,15 @@ public class Hello {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		// 输入
+		System.out.println("Hello world!");
 	}
 
 }
 ```
-技巧： alt+/ 自动命令提示
+技巧： alt+/ 自动命令提示.
+输入
+```
+System.out.println("Hello world!");
+```
+3 运行程序 点击播放按钮 会输出"Hello world!"
