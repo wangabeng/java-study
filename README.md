@@ -57,3 +57,17 @@ public class Hello {
 System.out.println("Hello world!");
 ```
 3 运行程序 点击播放按钮 会输出"Hello world!"
+
+# 运行javac的时候出错 Picked up _JAVA_OPTIONS: -Xmx512M
+可能的原因 在安装cordova的时候增加了一个环境变量  
+_JAVA_OPTIONS  = -Xmx512M
+解决办法  
+暂时先删除此环境变量 需要的时候再装  
+
+# java中的单引号
+不要在java中 使用单引号 切记
+
+# public static viod main 主函数是不带返回值的 
+public static int main 所以类似这样的写法就是错误的
+
+
