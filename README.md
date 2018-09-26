@@ -70,4 +70,27 @@ _JAVA_OPTIONS  = -Xmx512M
 # public static viod main 主函数是不带返回值的 
 public static int main 所以类似这样的写法就是错误的
 
+# java的一个冒泡排序
+```
+public class Sortvalue {
+  static int[] lists = {3, 1, 5, 6};
 
+  public static void main (String []args) {
+    for (int i = 0; i < lists.length - 1; i++) {
+      // 比较 是否交换位置
+      for (int j = i + 1; j < lists.length; j++) {
+        if (lists[i] < lists[j]) {
+          int middleValue = lists[i];
+          lists[i] = lists[j];
+          lists[j] = middleValue;
+        }
+      }
+    }
+
+    for (int j = 0; j < lists.length; j++) {
+      System.out.println(lists[j]);
+    }
+    
+  }
+}
+```
