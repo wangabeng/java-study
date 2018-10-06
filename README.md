@@ -96,3 +96,10 @@ public class Sortvalue {
 ```
 
 # 比较对象的相等 比如String对象 不能用 == 判断 而用StringA.equals(StringB) true是相等 false是不等
+
+# 参数错误抛出异常
+```
+if(n<0) {
+	throw new IllegalArgumentException("错误是：" + n); // so so
+}
+```
