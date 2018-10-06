@@ -94,3 +94,5 @@ public class Sortvalue {
   }
 }
 ```
+
+# 比较对象的相等 比如String对象 不能用 == 判断 而用StringA.equals(StringB) true是相等 false是不等
