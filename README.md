@@ -103,3 +103,4 @@ if(n<0) {
 	throw new IllegalArgumentException("错误是：" + n); // so so
 }
 ```
+一旦抛出异常，thorw之后的代码就不会执行了
