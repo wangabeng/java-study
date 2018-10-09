@@ -64,6 +64,9 @@ _JAVA_OPTIONS  = -Xmx512M
 解决办法  
 暂时先删除此环境变量 需要的时候再装  
 
+# 产生随机数
+用 Math.randomO 来获得一个 0.0 到 1.0 之间的随机 double 值，不包括 1.0
+
 # java中的单引号
 不要在java中 使用单引号 切记
 
@@ -131,3 +134,6 @@ if (Math.abs(x - 0. S) < EPSILON)
 System.out.printlnCx + " is approximately 0.5")；// 将显示 0.S000000000000001近似等于 0.5
 
 ```
+
+# 理解异或 a^b 等价于a!=b 只有a和b不相等 才成立
+如果a为true b为true 则表达式为false ；如果a为false b为false 则表达式为false；如果a为true b为false 则表达式为true；
