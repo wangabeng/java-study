@@ -162,3 +162,24 @@ System.out.printlnCx + " is approximately 0.5")；// 将显示 0.S00000000000000
 最低级   =、+= 、-=、*=、/=、％=(陚值搡作符）
 
 ```
+
+# 入坑记 java静态方法不可以调用非静态方法和成员 例如
+```
+package how2j;
+
+public class Hero {
+	boolean b = true;
+	static double abc = 12.0;
+	
+	public static void main(String[] args) {
+		if (b) {
+			System.out.println(b);
+			System.out.println(abc);
+		}
+	}
+
+
+}
+```
+运行时报错： Cannot make a static reference to the non-static field b  
+解决办法：boolean b = true; 改为 static boolean b = true;
