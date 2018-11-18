@@ -183,3 +183,8 @@ public class Hero {
 ```
 运行时报错： Cannot make a static reference to the non-static field b  
 解决办法：boolean b = true; 改为 static boolean b = true;
+
+# java计划：
+11月21日前 完成 java语言程序设计基础部分 学习  
+11月30日前完成进阶部分学习   
+12月 项目javaweb 项目实战
