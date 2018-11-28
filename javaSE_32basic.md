@@ -32,3 +32,16 @@ switch(a) {
   // do b
 }
 ```
+
+# day06
+## arrayList
+先引包 import java.util.ArrayList
+定义：
+ArrayList<String> abc = new ArrayList<String>();  
+集合添加数据
+abc.add('dddds');
+abc.get(index);
+abc.set(索引值, 'ddddssd');
+abc.size();
+abc.remove(5);
+abc.clear(); 清空所有元素
