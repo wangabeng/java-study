@@ -20,3 +20,15 @@
 ## 关于跨平台
 jdk包含了jre jre包含了JDK 不同的操作系统有不同的Jre jre带jvm即虚拟机  
 终端用户不用开发 只装jre即可
+
+# day4 
+## case的穿透性
+```
+switch(a) {
+ case 1: // 如果case是1 如果没有遇到break 则一直往下穿透 直到遇到break为止， 如果一直没有遇到break 则一直穿透到底 即switch结束 再往后的时候 case已经不重要了 不再判断了只执行语句
+ case 2:
+  // do a
+ case 3:
+  // do b
+}
+```
