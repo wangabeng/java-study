@@ -184,11 +184,45 @@ public class Hero {
 运行时报错： Cannot make a static reference to the non-static field b  
 解决办法：boolean b = true; 改为 static boolean b = true;
 
-# java计划：
-11月21日前 完成 java语言程序设计基础部分 学习  
-11月30日前完成进阶部分学习   
-12月 项目javaweb 项目实战
+# 泛型
+```
+//  泛型：就是一种不确定的数据类型。
+// 比如：ArrayList<E> E就是泛型。 这种不确定的数据类型需要在使用这个类的时候才能够确定出来。
+// 泛型可以省略，如果省略，默认泛型是Object类型。
+// 泛型的好处：
+//   1. 省略了强转的代码。
+//   2. 可以把运行时的问题提前到编译时期。
+public class Demo01Generic {
+    public static void main(String[] args) {
 
-1118 199页
 
-131
+        //创建集合不给出泛型
+        ArrayList list = new ArrayList();
+        list.add("hello");
+        list.add("java");
+        list.add("world");
+        //遍历集合
+        for (Object obj : list) System.out.println(obj);
+//进行遍历，打印出每个字符串长度
+        for (Object obj : list) {
+            String str = (String) obj;/*此处练习了向下转型*/
+            System.out.println(str.length());
+        }
+        //创建集合给出泛型
+        ArrayList<String> list2 = new ArrayList<>();
+        //添加元素
+        list2.add("helloo");
+        list2.add("helo");
+        list2.add("world");
+         //list2.add(100);编译的时候就会报错，如果没有给出泛型，则不会报错
+        //使用增强for遍历集合
+        for (String str2 : list2
+                ) {
+            System.out.println(str2);
+
+        }
+    }
+
+}
+
+```
