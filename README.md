@@ -226,3 +226,5 @@ public class Demo01Generic {
 }
 
 ```
+# 引包调用类出现问题 The constructor Indivi() is not visible 
+原因 构造函数未设置public属性
