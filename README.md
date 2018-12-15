@@ -258,7 +258,7 @@ public class UseTool {
 }
 ```
 
-# java存储键值对集合
+# java hashMap存储键值对集合
 ```
 
 import java.util.HashMap;
@@ -290,5 +290,19 @@ public class Demo3_Iterator {
     }
   }
  
+}
+```
+# hashMap迭代方式(效率最高):
+需要导入包 Map HashMap Iterator  
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;  
+```
+Map map = new HashMap();
+Iterator iter = map.entrySet().iterator();
+while (iter.hasNext()) {
+	Map.Entry entry = (Map.Entry) iter.next();
+	Object key = entry.getKey();
+	Object val = entry.getValue();
 }
 ```
