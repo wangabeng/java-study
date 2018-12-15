@@ -228,3 +228,32 @@ public class Demo01Generic {
 ```
 # 引包调用类出现问题 The constructor Indivi() is not visible 
 原因 构造函数未设置public属性
+
+# 泛型demo
+1 src下新建包 定义泛型工具类 abeng.test.cn 新建 Tool.java； 
+```
+package abeng.test.cn;
+
+// 泛型可以理解为定义一个未知的类型
+public class Tool<E> {
+	public E abc;
+	// 构造函数必须为public
+	public Tool (E edd) {
+		this.abc = edd;
+	}
+}
+```
+2 src下新建包 使用泛型类 abeng.test.com 新建UseTool.java;
+```
+package abeng.test.com;
+
+import abeng.test.cn.*;
+
+public class UseTool {
+	public static void main (String[] args) {
+		// Volume<Circle> c1v=new Volume<Circle>(c1,2.5) 使用泛型类
+		Tool<String> a = new Tool<String>("abeng");
+		System.out.println(a.abc);
+	}
+}
+```
