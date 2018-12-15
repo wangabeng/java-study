@@ -306,3 +306,30 @@ while (iter.hasNext()) {
 	Object val = entry.getValue();
 }
 ```
+一个实例
+```
+package abeng.test.com;
+
+// import abeng.test.cn.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class UseTool {
+	public static void main (String[] args) {
+		Map map = new HashMap();
+	    map.put("张三", 23);
+	    map.put("李四", 24);
+	    map.put("王五", 25);
+	    map.put("赵六", 26);
+	    
+		Iterator iter = map.entrySet().iterator();
+		while (iter.hasNext()) {
+			Map.Entry entry = (Map.Entry) iter.next();
+			Object key = entry.getKey();
+			Object value = entry.getValue();
+			System.out.println(key + " and " + value);
+		}
+	}
+}
+```
