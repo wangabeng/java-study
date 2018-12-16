@@ -55,3 +55,41 @@ a = a + b; // 报错a是int型 加3.4 结果会自动往高精度走 是6.4 高�
 # lesson 4
 注意switch  
 金字塔练习
+
+# lesson5 
+对象和方法
+
+# lesson6
+对象和方法
+
+# lesson7 
+## 方法声明  
+只是声明方法 并没有方法体 不是定义方法 只是声明这里有个方法  
+例如  
+```
+// public 访问修饰符 总共有四种类型
+// int 返回值 如果什么都不返回 是void
+// abc 函数名
+// int a 参数列表
+public int abc(int a) {
+  // do something
+}; 
+```
+
+## 构造方法
+// 不能有返回值 必须为public
+public Person (int age) {
+  // do something
+}
+
+## 默认构造方法是
+pblic Person () {}
+但是一旦声明一个构造方法 默认构造方法就被覆盖了。
+比如：  
+声明了一个构造方法  
+```
+// 如果在实例化的时候 这样创建 new Person（） 不传值 就会报错 因为默认构造方法被覆盖了 如果想不报错，就必须再创建一个不传值的构造方法 public Person () {}
+public Person (int age) {
+  this.age = age;
+}
+```
