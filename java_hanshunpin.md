@@ -127,7 +127,10 @@ public Person (int age) {
 public（完全公开） 
 potected（受保护的 不同包不可以访问 只能在这个包内访问） 也能在子类中访问 
 默认（没有修饰符 只能在同类 同包中访问）不能在子类中访问 
-private 只能在同类中访问
+private 只能在同类中访问  
+
+四种访问级别见下图  
+![avatar](/img/四种访问级别.png)
 
 
 
