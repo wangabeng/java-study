@@ -159,3 +159,48 @@ public属性和方法可以被继承 默认的属性和方法 protected的属性
 
 ### 多态理解 master为 dog喂bone， 为cat喂fish  
 ![avatar](/img/多态理解.png)
+
+### 多态案例  
+```
+package abeng.duotai;
+
+public class DuotaiTest {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    /*Cat cat1 = new Cat();
+    cat1.cry();
+    Dog dog1 = new Dog();
+    dog1.cry();*/
+    Animal cat1 = new Cat();
+    cat1.cry();
+    Animal dog1 = new Dog();
+    dog1.cry();
+  }
+
+}
+
+// 动物类
+class Animal {
+  private int name;
+  public int getName  () {
+    return this.name;
+  }
+  public void cry () {
+    System.out.println("不知道怎么叫");
+  }
+}
+
+// 猫类
+class Cat extends Animal {
+  public void cry () {
+    System.out.println("miaomiao");
+  }
+}
+//狗类
+class Dog extends Animal {
+  public void cry () {
+    System.out.println("wangwang");
+  }
+}
+```
