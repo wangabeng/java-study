@@ -204,3 +204,28 @@ class Dog extends Animal {
   }
 }
 ```
+
+# lesson 13 抽象类
+
+### 什么是抽象类  
+当父类的一些方法不能确定时 可以用abstract关键词来修饰该方法【抽象方法】
+用abstract来修饰该类【抽象类】
+```
+// 一个抽象类
+// 动物类
+abstract class Animal {
+  private int name;
+  public int getName  () {
+    return this.name;
+  }
+  abstract public void cry (); // 按照java语法规定 在子类中必须实现此抽象方法
+}
+```
+
+### 抽象类特征
+1 抽象类 不可以被实例化 比如这个animal类 就不可以被实例化  
+2 抽象类可以不包含abstract方法
+3 一旦包含了abstract方法 此类必须声明为抽象类  
+4 抽象方法不能有主体
+
+### 接口
