@@ -229,3 +229,10 @@ abstract class Animal {
 4 抽象方法不能有主体
 
 ### 接口
+接口中的变量 必须是static 而且是final的 即便不写前缀 也是 而且不能被更改
+```
+interface Usb {
+  int a = 2; // 默认是static final的 不能被更改的 不能用private修饰 而且必须被初始化赋值
+}
+```
+小技巧 很多程序员喜欢用接口来定义全局变量
