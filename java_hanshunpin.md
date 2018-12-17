@@ -236,3 +236,6 @@ interface Usb {
 }
 ```
 小技巧 很多程序员喜欢用接口来定义全局变量
+
+### final
+![avatar](/img/final.png)
