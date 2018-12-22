@@ -41,6 +41,7 @@ Hello.java文件。
 ```
 package hello;
 
+
 public class Hello {
 
 	public static void main(String[] args) {
@@ -333,3 +334,8 @@ public class UseTool {
 	}
 }
 ```
+
+# javaEE安装入坑
+还是要下载javaSE安装包
+（入坑记录https://bbs.csdn.net/topics/392317102）
+https://www.oracle.com/technetwork/java/javaee/downloads/index.html
