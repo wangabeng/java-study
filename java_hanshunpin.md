@@ -264,6 +264,6 @@ int[] abc = new int[5]; // 定义一个长度为5的 存放int类型的数组
 
 #lesson 22 集合 ArrayList
 
-#lesson 22 集合 HashMap HashTab 
+#lesson 23 集合 HashMap HashTab 
 
 ## 韩顺平很喜欢HashMap HashTable 都是键值对
