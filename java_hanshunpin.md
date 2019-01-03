@@ -311,5 +311,118 @@ public class UseTool {
 }
 ```
 ## 泛型反射机制
+```
+package abeng.fanxing;
 
+public class Fanxing {
 
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    Gen<String> genObj = new Gen<String>("aaaa");
+    genObj.showTyppeName();
+  }
+
+}
+
+class Gen<E> {
+  private E abc;
+  public Gen (E a) {
+    this.abc = a;
+  }
+  public void showTyppeName () {
+    System.out.println(abc.getClass().getName()); // 'java.lang.String'  体现反射机制  通过反射机制可以得到Gen的很多信息 
+  }
+}
+
+```
+## 异常处理
+java中2种方法处理异常：  
+1 在发生异常的地方直接处理；
+2 将异常抛给调用者，让调用者处理。
+
+## 异常分类
+1 检查性异常  
+程序正确，但是因为外在的环境条件不满足引发。例如：用户错误及I/O问题——程序试图打开一个并不存在的远程Socket端口，或则打开一个不存在的文件。这不是程序本身的逻辑错误，而很可能是远程机器名字错误(用户拼写错误)。必须捕获这类异常，否则程序将不能被编译。  
+```
+package abeng.zhengchu;
+import java.io.*;
+
+public class ExceptionTest {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    FileReader abc = new FileReader("d:/d.txt");
+  }
+
+}
+```
+2 运行期异常  
+程序存在bug，如数组越界，0被除，入参不满足规范---这类异常需要更改程序来避免。java编译器强制要求处理这类异常。
+```
+package abeng.zhengchu;
+import java.io.*;
+
+public class ExceptionTest {
+
+  public static void main(String[] args) {
+    int a = 4 / 0; 
+    
+  }
+
+}
+```
+3 错误  
+一般很少见，也很难通过程序来解决。他可能源于程序的bug，但一般更可能源于环境问题，如内存耗尽。错误在程序中无须处理，而由运行环境处理。
+
+# lesson 26 常处理
+## 代码自动补全（提示）alt + /
+1 处理异常  
+```
+package abeng.zhengchu;
+import java.io.*;
+
+public class ExceptionTest {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    try {
+      int a = 4 / 0;
+    } catch (Exception e) {
+      // TODO: handle exception
+      e.printStackTrace(); // java.lang.ArithmeticException: / by zero
+                            // at abeng.zhengchu.ExceptionTest.main(ExceptionTest.java:9)
+    }
+  }
+
+}
+```
+以上方法是最大捕获异常，还有人推荐会出现什么异常，就捕获什么异常。（即最小捕获）
+2 最小捕获。在异常语句的错误提示上选择suronded width try/catch即可
+```
+package abeng.zhengchu;
+import java.io.*;
+
+public class ExceptionTest {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    try {
+      FileReader abc = new FileReader("d:/d.txt");
+    } catch (FileNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+  }
+
+}
+
+```
+3 抛出异常交给调用者处理
+```
+public void test () throw Exception { // 抛出异常
+  
+}
+// 调用的时候try catch 用法同上 略
+```
+
+# lesson 27 作业点评
