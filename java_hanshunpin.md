@@ -269,3 +269,5 @@ int[] abc = new int[5]; // 定义一个长度为5的 存放int类型的数组
 ## 韩顺平很喜欢HashMap HashTable 都是键值对
 
 ## ArrayList Vector区别同 HashMap 与 HashTab的区别类似。 
+Vector同步的，线程安全  
+ArrayList异步的，不安全。
