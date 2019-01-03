@@ -254,16 +254,18 @@ int[] abc = new int[5]; // 定义一个长度为5的 存放int类型的数组
 交换排序1 冒泡排序bubble sort
 交换排序2 快速排序quick sort
 
-#lesson 18 查找
+# lesson 18 查找
 
-#lesson 19 多为数组
+# lesson 19 多为数组
 
-#lesson 20 位运算
+# lesson 20 位运算
 
-#lesson 21 集合
+# lesson 21 集合
 
-#lesson 22 集合 ArrayList
+# lesson 22 集合 ArrayList
 
-#lesson 23 集合 HashMap HashTab 
+# lesson 23 集合 HashMap HashTab 
 
 ## 韩顺平很喜欢HashMap HashTable 都是键值对
+
+## ArrayList Vector区别同 HashMap 与 HashTab的区别类似。 
