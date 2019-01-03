@@ -426,3 +426,76 @@ public void test () throw Exception { // 抛出异常
 ```
 
 # lesson 27 作业点评
+
+# lesson 28 面试评讲
+
+# lesson 29--52 GUI swing编程 略（其中的线程和IO编程需要单独学习）
+
+# lesson 38 线程的理解
+![avatar](/img/线程理解.png)
+一个简单的线程demo
+```
+package abeng.zhengchu;
+
+public class ThreadTest {
+  public static void main(String[] args) {
+    Cat newCat = new Cat();
+    newCat.start();
+    
+  }
+}
+
+class Cat extends Thread {
+  // 重写run函数
+  public void run () {
+    System.out.print("ddd");
+  }
+}
+```
+
+## 一个需求 每隔100毫秒 cat叫一次
+用线程的sleep方法 sleep会使线程进入阻塞状态，并释放此线程占用的资源  
+```
+Thread.sleep(100);  // 休眠100毫秒
+```
+## 线程的5个状态
+![avatar](/img/线程状态图.png)
+
+## 通过runable接口的方式来实现线程
+为什么要使用这个runnable？ 
+因为java是单继承的，如果一个类已经继承了一个类，就不能再继承thread类了，所以可以通过实现runable接口来创建线程。
+需求 通过继承runnable方式实现每隔一秒打印一次hello world
+```
+package abeng.zhengchu;
+
+public class ThreadTest2 {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    Dog dog = new Dog();
+    Thread t = new Thread(dog);
+    t.start();
+  }
+
+}
+
+class Dog implements Runnable {
+  int times = 0;
+  public void run () {
+    while (true) {
+      try {
+        Thread.sleep(1000);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      times ++;
+      System.out.print("Hello world");
+      if (times == 10) {
+        break;
+      }
+    }
+  }
+}
+```
+# lesson 39 多线程
+
