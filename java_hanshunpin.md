@@ -269,5 +269,47 @@ int[] abc = new int[5]; // 定义一个长度为5的 存放int类型的数组
 ## 韩顺平很喜欢HashMap HashTable 都是键值对
 
 ## ArrayList Vector区别同 HashMap 与 HashTab的区别类似。 
-Vector同步的，线程安全  
-ArrayList异步的，不安全。
+1 Vector同步的，线程安全   
+ArrayList异步的，不安全。  
+2  数据增长  
+Vector数据自动增长为原来的1倍(适用于大量的数据)    
+ArrayList数据自动增长为原来的0.5倍  
+
+# lesson 24 集合总结
+![avatar](/img/集合选择建议.png)
+
+# lesson 25 泛型 异常 
+## 泛型基本概念  
+![avatar](/img/泛型基本概念.png)
+
+## 泛型demo  
+1 src下新建包 定义泛型工具类 abeng.test.cn 新建 Tool.java；  
+```
+package abeng.test.cn;
+
+// 泛型可以理解为定义一个未知的类型
+public class Tool<E> {
+  public E abc;
+  // 构造函数必须为public
+  public Tool (E edd) {
+    this.abc = edd;
+  }
+}
+```
+2 src下新建包 使用泛型类 abeng.test.com 新建UseTool.java;
+```
+package abeng.test.com;
+
+import abeng.test.cn.*;
+
+public class UseTool {
+  public static void main (String[] args) {
+    // Volume<Circle> c1v=new Volume<Circle>(c1,2.5) 使用泛型类
+    Tool<String> a = new Tool<String>("abeng");
+    System.out.println(a.abc);
+  }
+}
+```
+## 泛型反射机制
+
+
