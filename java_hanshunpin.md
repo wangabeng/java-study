@@ -461,7 +461,7 @@ Thread.sleep(100);  // 休眠100毫秒
 ## 线程的5个状态
 ![avatar](/img/线程状态图.png)
 
-## 通过runable接口的方式来实现线程
+## 通过runable接口的方式来实现线程(推荐实现接口的方法实现线程)
 为什么要使用这个runnable？ 
 因为java是单继承的，如果一个类已经继承了一个类，就不能再继承thread类了，所以可以通过实现runable接口来创建线程。
 需求 通过继承runnable方式实现每隔一秒打印一次hello world
@@ -498,4 +498,15 @@ class Dog implements Runnable {
 }
 ```
 # lesson 39 多线程
+两种线程用法的区别
+![avatar](/img/线程区别.png)
+
+# lesson 43 IO编程
+1 文件流的基本概念  
+![avatar](/img/文件流概念.png)
+2 如何判断是输入流还是输出流？  
+以内存为参照。如果向内存流动，就是输入流。反之，就是输出流。
+3 文件流分类  
+![avatar](/img/文件流分类.png)
+
 
