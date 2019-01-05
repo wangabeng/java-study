@@ -111,7 +111,15 @@ switch(a) {
 ![avatar](/img/方法内存图.png)
 
 # day06
+## 2个引用类型变量内存图
+![avatar](/img/内存图.png)
+
 ## arrayList
+使用注意事项: 集合只能存引用数据类型 不能存基本数据类型。  
+如果想存基本数据类型，必须先转成引用数据类型，然后再存储。  
+![avatar](/img/arraylist存储.png)
+
+使用方法：   
 先引包 import java.util.ArrayList
 定义：
 ArrayList<String> abc = new ArrayList<String>();  
@@ -123,8 +131,6 @@ abc.size();
 abc.remove(5);
 abc.clear(); 清空所有元素
 
-## 2个引用类型变量内存图
-![avatar](/img/内存图.png)
 
 # day13
 ## 包
