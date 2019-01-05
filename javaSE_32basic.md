@@ -74,6 +74,26 @@ public class Test {
 }
 ```
 
+# day3 if for循环等
+## scanner类 引用数据类型。功能：接收键盘的输入。 
+用法示例
+```
+package ben.scanner;
+import java.util.Scanner;
+
+public class Test {
+  public static void main (String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt(); // 只能输入int类型
+
+    System.out.println(a); 
+  }
+}
+```
+sc.next() 接收字符串数据
+
+## random类 也是个引用类型
+
 # day4 
 ## case的穿透性
 ```
@@ -85,6 +105,10 @@ switch(a) {
   // do b
 }
 ```
+
+# day5 方法
+## 方法调用内存图 05_06
+![avatar](/img/方法内存图.png)
 
 # day06
 ## arrayList
@@ -98,6 +122,9 @@ abc.set(索引值, 'ddddssd');
 abc.size();
 abc.remove(5);
 abc.clear(); 清空所有元素
+
+## 2个引用类型变量内存图
+![avatar](/img/内存图.png)
 
 # day13
 ## 包
