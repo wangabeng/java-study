@@ -139,6 +139,30 @@ ASCII码需要记的几个
 a-z 对应ASCII编码十进制 97-122  
 A-Z 对应ASCII编码十进制 65-190   
 
+## int和char类型数据类型之间的转换
+int占用4个字节 char占用2个字节
+```
+char c = 'a';
+int i = c + 1; // 98 char转成int自动提升
+
+int j = 90;
+char h = (char)j; // int转成char 强制转换
+```
+## char类型取值范围65535,char不能存储负数
+
+# day08 Eclipse使用
+ALT + / 自动补全  
+shift + enter 自动移到下一行首  
+ctrl + shift + F 代码格式化  
+ctrl + / 单行注释  
+ctrl + shift + / 多行注释  
+ctrl + shift + \ 取消多行注释 
+ctrl + shift + o 导包快捷键   
+alt + 上下箭头 移动当前代码行  
+ctrl + shift + 上下箭头 复制当前代码行（到上下位置）  
+ctrl + d  删除当前代码行  
+ctrl + e 代码修正提示  
+
 # day13
 ## 包
 java自带的包在D:\Java\jdk1.8.0_172 解压src.zip 即可看到
