@@ -42,8 +42,37 @@ long abc = 100L;
 数据范围大小  
 小 《  大
 byte < short < int < long < float < double 
-范围小的可以自动转换为范围大的  范围大不能转为范围小的
+范围小的可以自动转换为范围大的  范围大不能转为范围小的  
+数据类型转换有2种方式  
+1 自动类型转换: 范围小的可以自动转换为范围大的    
+```
+package TestBianlliang;
 
+public class Test {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    int a = 1000; // 分配了4个字节
+    double d = a; // 定义double类型 分配了8个字节 把100放到8个字节的空间里 是可以放的 这就是转换的原理。相当于10L的桶 装5L的油 是可以装的
+    System.out.println(d); //  1000.0 自动转换
+  }
+
+}
+```
+2 强制类型转化: 范围大的转换成范围小的。
+```
+package TestBianlliang;
+
+public class Test {
+
+  public static void main(String[] args) {
+    double d = 1.5;
+    int b = (int)d; // 没有空格
+    System.out.println(b);
+  }
+
+}
+```
 
 # day4 
 ## case的穿透性
