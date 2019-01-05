@@ -117,7 +117,8 @@ switch(a) {
 ## arrayList
 使用注意事项: 集合只能存引用数据类型 不能存基本数据类型。  
 如果想存基本数据类型，必须先转成引用数据类型，然后再存储。  
-![avatar](/img/arraylist存储.png)
+![avatar](/img/arraylist存储.png)  
+也可以存储自定义的类 比如phone类  
 
 使用方法：   
 先引包 import java.util.ArrayList
@@ -131,6 +132,12 @@ abc.size();
 abc.remove(5);
 abc.clear(); 清空所有元素
 
+# day07
+## ASCII编码表
+ASCII码需要记的几个  
+0-9对应ASCII编码十进制 48-57  
+a-z 对应ASCII编码十进制 97-122  
+A-Z 对应ASCII编码十进制 65-190   
 
 # day13
 ## 包
