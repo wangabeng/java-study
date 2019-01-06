@@ -24,11 +24,29 @@ USE databasename;
 ```
 
 ### 表操作
-创建表操作  
+### 查看当前数据库的所有数据表
+```
+USE databasename;
+SHOW TABLES;
+```
+
+#### 创建表操作  
 ```
 CREATE TABLE tablename (
   uid INT,
   username VARCHAR(20),
   uaddress VARCHAR(200)
-)
+);
 ```
+#### 主键约束  
+主键是用于标识当前记录的字段。他的特点是非空，唯一。在开发中一般情况下主键是不具备任何含义，只是用于标识当前记录。
+设置方法：uid INT PRIMRAY KEY
+```
+CREATE TABLE tablename (
+  uid INT PRIMRAY KEY,
+  username VARCHAR(20),
+  uaddress VARCHAR(200)
+);
+```
+如何实现主键自增长  
+uid INT PRIMRAY KEY AUTO_INCREMENT
