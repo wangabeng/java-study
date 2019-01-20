@@ -353,7 +353,25 @@ cookie的目的：每次发送请求的时候 每次都有同样的数据，比�
 3 浏览器下次发送请求，（无论发送到哪个页面的请求，只要是这个web工程）都将自动带这个用户名的信息  
 
 ## cookie的特点：  
-1 是一种浏览器端的数据存储技术。声明和设置在服务器中，使用是在浏览器中使用。
+1 是一种浏览器端的数据存储技术。声明和设置在服务器中，使用是在浏览器中使用。  
+2 一旦把浏览器关闭，再次打开的时候，cookie就丢失了。说明cookie实际上存储在客户端的运行内存中。
+3 cookie的存储方式有两种，临时存储和定时存储。临时存储存储在浏览器的运行内存中，浏览器关闭则cookie失效；  
+定时存储，可以设置cookie的有效期，设置了有效期的cookie存储在客户端的硬盘中。
+```
+  // 设置cookie 定时存储
+     Cookie c2 = new Cookie("benname", "wangbenben");
+     c2.setMaxAge(1000 * 60);
+     response.addCookie(c2);
+```
+
+4 设置好cookie之后，每次请求web工程页面，都会自动附带cookie数据，除非设置存储路径。  
+设置cookie的请求路径，比如/data，那么只有输入/data的请求，才会带这个cookie的请求数据。
+```
+     Cookie c2 = new Cookie("benname", "wangbenben");
+     c2.setMaxAge(1000 * 60); // 设置有效期
+     c2.setPath("/date");
+     response.addCookie(c2);
+```
 
 
 
