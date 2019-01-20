@@ -342,7 +342,7 @@ https://wiki.eclipse.org/Older_Versions_Of_Eclipse
 # servlet中cookie的使用
 cookie的目的：每次发送请求的时候 每次都有同样的数据，比如每次都有用户名，可不可以第一次发送请求的时候，服务器把这个用户名保存起来，返回给浏览器，浏览器下次即便不请求同样的地址，只要是请求这个web项目，发送的数据即便不定义，也会自动带有这个用户名信息。这就是cookie技术。  
 
-## cookie如何使用：  
+## cookie使用原理：  
 1 浏览器发送请求，带有用户名信息；  
 2 服务器返回response 把用户名信息保存到cookie中，返回给浏览器；  
 ```
@@ -352,7 +352,7 @@ cookie的目的：每次发送请求的时候 每次都有同样的数据，比�
 注意： 一个Cookie对象只能存储一条Cookie数据，如果想存储多条数据，只有多创建cookie对象。  
 3 浏览器下次发送请求，（无论发送到哪个页面的请求，只要是这个web工程）都将自动带这个用户名的信息  
 
-## cookie的特点：  
+## cookie的特点(创建和存储)：  
 1 是一种浏览器端的数据存储技术。声明和设置在服务器中，使用是在浏览器中使用。  
 2 一旦把浏览器关闭，再次打开的时候，cookie就丢失了。说明cookie实际上存储在客户端的运行内存中。
 3 cookie的存储方式有两种，临时存储和定时存储。临时存储存储在浏览器的运行内存中，浏览器关闭则cookie失效；  
@@ -373,5 +373,30 @@ cookie的目的：每次发送请求的时候 每次都有同样的数据，比�
      response.addCookie(c2);
 ```
 
+## cookie的使用：
+在服务器端servlet中cookie的获取  
+在request中获取
+```
+Cookie[] cks = req.getCookies();
+if (cks != null) { // 防止出现空指针异常
+  for (Cookie c:cks) {
+    // 获取键值对
+    String name = c.getName(); 
+    String value = c.getValue();
+  }  
+}
+
+```
+重点： 重启服务器，cookie不会失效，为什么？因为cookie存储到浏览器端了。
+
+## cookie实际使用案例 三天免登录
+实现原理：  
+判断请求中是否携带正确的cookie信息  
+如果有 则校验cookie信息是否正确  
+  如果正确 则直接相应主页面给用户  
+  如果校验不正确 则响应登录页面给用户 
+没有cookie信息 则请求转发给登录页面  
+  
+在登录页面 如果用户登录成功 保存用户的uid在cookie中 并设置cookie的有效期 为3天     
 
 
