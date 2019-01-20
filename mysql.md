@@ -110,5 +110,25 @@ INSERT INTO 表名 VALUES (值1,值2,值3);
 INSERT INTO 表名 (列名1,列名2,列名3) VALUES (值1,值2,值3),(值1,值2,值3),(值1,值2,值3);
 ```
 
-### 5 对数据进行更新操作 在原有基础上修改数据
-DAY28_22
+### 5 对数据进行更新操作 在原有基础上修改数据  
+AND 
+OR  
+NOT  
+id IN (1,2,3,4)    
+id NOT IN (1,2,3,4)    
+```
+UPDATE 表名 set 列1=值1, 列2=值2 WHERE id=2 AND price=20;
+```
+
+### 6 删除表中的数据(不清空AUTO_INCREMENT记录)   
+```
+DELETE FROM tablename WHERE id=2;
+```
+
+### 7 删除表 重新建表(AUTO_INCREMENT重置为0)  
+```
+TRUNCATE tablename;
+```
+
+# 查询语句
+day28_25

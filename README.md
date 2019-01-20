@@ -337,3 +337,7 @@ public class UseTool {
 
 # eclipse历史版本下载
 https://wiki.eclipse.org/Older_Versions_Of_Eclipse
+
+----------
+# servlet中cookie的使用
+cookie的目的：每次发送请求的时候 每次都有同样的数据，比如每次都有用户名，可不可以第一次发送请求的时候，服务器把这个用户名保存起来，返回给浏览器，浏览器下次即便不请求同样的地址，只要是请求这个web项目，发送的数据即便不定义，也会自动带有这个用户名信息。这就是cookie技术
