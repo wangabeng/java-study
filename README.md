@@ -403,6 +403,39 @@ if (cks != null) { // 防止出现空指针异常
 
 # session技术
   
+# io操作
+项目根目录下存放a.txt
+img是当前目录 及工程项目目录下的img文件夹  
+```
+package file.test.ben;
 
+import java.io.File;
+
+public class FileTest {
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    File fileObj = new File("a.txt"); // img是当前目录 及工程项目目录下的img文件夹， 不能这样写 "./b.txt"
+    System.out.println("file" + fileObj.exists());
+    System.out.println("file" + fileObj.length());
+    System.out.println("file can read" + fileObj.canRead());
+    System.out.println("file can write" + fileObj.canWrite());
+    System.out.println("file isDirectory" + fileObj.isDirectory());
+    System.out.println("file isFile" + fileObj.lastModified());
+  }
+
+}
+```
+关于文件路径（基础408）：  
+在程序中，不要直接使用绝对文件名。如果使用了像 c:\\book\\Welcome.java 之类的文件名，那么它能在 Windows上工作，但是不能在其他平台上工作。应该使用与当前目录相关的文件名。例如，可以使用 new Filerwelcome.java")为在当前目录下的文件 Welcome。  
+
+
+
+# 文件输入输出
+使用 Scanner 类从文件中读取文本數据，使用 PrintWriter 类向文本文件写入数据。
+412  
+
+# main()中System.exit()的作用
+System.exit()这个方法，接收一个参数status，0表示正常退出（将你的整个虚拟机里的内容都停掉了），非零参数表示非正常退出。
 
 
