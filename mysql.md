@@ -132,3 +132,4 @@ TRUNCATE tablename;
 
 # 查询语句
 day28_25
+### 8 查询语句
