@@ -133,3 +133,30 @@ TRUNCATE tablename;
 # 查询语句
 day28_25
 ### 8 查询语句
+```
+SELECT 列名1, 列名2 FROM 表名
+SELECT * FROM 表名
+```
+去掉重复数据查询  
+```
+SELECT DISTINCT 列名 FROM 表名
+``` 
+查询后对数据进行运算, 查询后对列名2加1000
+```
+SELECT  列名1, 列名2+1000 FROM 表名
+```
+day28_27  
+条件查询  
+![avatar](/img/条件查询.png)  
+```
+SELCET * FROM 表名 WHERE zname="吃饭支出"
+```
+day28_29  
+排序查询 DESC 降序 ASC升序 默认升序    
+```
+SELECT * FROM 表名 ORDER BY zmoney DESC
+```
+day28_30  
+聚合查询  
+是对一列的值进行计算  
+![avatar](/img/聚合.png)  
