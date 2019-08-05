@@ -438,4 +438,6 @@ public class FileTest {
 # main()中System.exit()的作用
 System.exit()这个方法，接收一个参数status，0表示正常退出（将你的整个虚拟机里的内容都停掉了），非零参数表示非正常退出。
 
-
+# 反射讲解
+https://blog.csdn.net/lwl20140904/article/details/80163880
+最详细
